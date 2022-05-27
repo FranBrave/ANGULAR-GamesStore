@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GamesDetailComponent } from './games-detail.component';
 
 describe('GamesDetailComponent', () => {
@@ -23,3 +23,4 @@ describe('GamesDetailComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

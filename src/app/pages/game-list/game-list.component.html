@@ -1,0 +1,14 @@
+<p>Games List:</p>
+<button (click)="onModify()">{{ canModify ? "Stop" : "Modify" }}</button>
+{{ sortCriteria ? "Ascendent" : "Descendent" }}
+<h1>Click here to see the games</h1>
+<div *ngIf="games" class="games-list">
+  <app-games
+    class="games"
+    *ngFor="let game of games"
+    [games]="game"
+    [canDelete]="canModify"
+    (delete)="onDelete(game.title)"
+  ></app-games>
+</div>
+<app-filter></app-filter>

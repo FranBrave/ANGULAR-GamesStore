@@ -1,23 +1,26 @@
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GamesComponent } from './pages/games/games.component';
-import { GamesDetailComponent } from './pages/games/games-detail/games-detail.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+
+
+import { HeaderComponent } from './core/components/header/header.component';
+import { FooterComponent } from './core/components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GamesDetailComponent,
-    NavbarComponent
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,19 @@
+<div
+  class="game"
+  *ngIf="games"
+  (click)="onClick()"
+  [ngClass]="{
+    'game--active': isSelected
+  }"
+>
+  <img class="game__image" [src]="games.thumbnail" />
+  <div class="game__info">
+    <p class="game__title">{{ games.title }}</p>
+    <p class="game__genre">{{ games.genre }}</p>
+    <p class="game__developer">{{ games.developer }}</p>
+    <button class="game__delete" *ngIf="canDelete" (click)="onDelete()">
+      Eliminar
+    </button>
+    <a [routerLink]="['/detail', games.id]">Ver más</a>
+  </div>
+</div>

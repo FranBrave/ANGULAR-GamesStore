@@ -1,0 +1,12 @@
+<div *ngIf="currentGame$ | async as currentGame">
+  <p>{{ currentGame.title }}</p>
+  <div
+    class="product__color"
+    [ngStyle]="{
+      'background-color': currentGame.thumbnail
+    }"
+  ></div>
+  <img [src]="currentGame.thumbnail" />
+  <p>{{ currentGame.freetogame_profile_url }}</p>
+</div>
+<app-filter></app-filter>

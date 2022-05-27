@@ -1,10 +1,14 @@
+import { GamesDetailModule } from './pages/game-detail/games-detail.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 
 {
-  path: "games", loadChildren: () => import ("../app/pages/games/games.module").then(m => m.GamesModule)
+  path: "games", loadChildren: () => import ("./pages/game-list/game-list.module").then(m => m.GameListModule)
+},
+{
+  path: "detail", loadChildren: () => import ("./pages/game-detail/games-detail.module").then(m => m.GamesDetailModule)
 },
 {
   path: "recomendations" , loadChildren: () => import ("../app/pages/recomendations/recomendations.module").then(m => m.RecomendationsModule)
@@ -13,7 +17,7 @@ const routes: Routes = [
   path: "about" , loadChildren: () => import ("../app/pages/about/about.module").then(m => m.AboutModule)
 },
 {
-  path:"", redirectTo: "/games" , pathMatch: "full"
+  path:"", redirectTo: "games" , pathMatch: "full"
 }
 ];
 
