@@ -1,14 +1,26 @@
-<p>Games List:</p>
-<button (click)="onModify()">{{ canModify ? "Stop" : "Modify" }}</button>
-{{ sortCriteria ? "Ascendent" : "Descendent" }}
-<h1>Click here to see the games</h1>
+<input placeholder="Search game..." [(ngModel)]="filterValue" />
+<h1>Games to get for free</h1>
 <div *ngIf="games" class="games-list">
   <app-games
     class="games"
-    *ngFor="let game of games"
+    *ngFor="
+      let game of games
+        | filter: filterValue
+        | paginate
+          : {
+              itemsPerPage: tableSize,
+              currentPage: page,
+              totalItems: count
+            };
+      let i = index
+    "
     [games]="game"
     [canDelete]="canModify"
     (delete)="onDelete(game.title)"
   ></app-games>
+  <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"
+  ></pagination-controls>
 </div>
-<app-filter></app-filter>

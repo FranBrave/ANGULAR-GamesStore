@@ -1,4 +1,6 @@
 .game {
+    display: flex;
+    flex-direction: row;
     width: 200px;
     margin-right: 24px;
     border: 1px solid lightgrey;
@@ -13,6 +15,8 @@
 
     &__info {
         padding: 8px;
+        font-weight: 500;
+        font-size: large;
     }
 
     &__thumbnail {

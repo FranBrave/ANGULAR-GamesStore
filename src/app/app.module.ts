@@ -5,6 +5,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
+import { PipesModule } from 'w-ng5';
 
 
 
@@ -18,7 +21,9 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    NgxPaginationModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

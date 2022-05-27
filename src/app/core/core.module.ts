@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';;
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { PaginationService } from './services/pagination.service';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     FooterComponent
   ],
   providers: [
+    PaginationService,
     GamesService
   ],
   imports: [

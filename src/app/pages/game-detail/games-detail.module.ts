@@ -1,5 +1,4 @@
 import { RouterModule } from '@angular/router';
-import { SharedModule } from './../../shared/shared.module';
 import { GamesDetailComponent } from './games-detail.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -14,7 +13,6 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     HttpClientModule,
-    SharedModule,
     RouterModule
   ]
 })
