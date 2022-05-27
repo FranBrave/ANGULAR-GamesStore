@@ -1,1 +1,8 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="social">
+    <a *ngFor="let socialNetwork of socialNetworks" [href]="socialNetwork.url">
+      <img src="{{ socialNetwork.image }}"
+    /></a>
+  </div>
+  <div class="copy">© Todos los derechos e izquierdos bien puestos</div>
+</footer>

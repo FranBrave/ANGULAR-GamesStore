@@ -1,3 +1,28 @@
-.div {
-    background-color: black;
+.game {
+    width: 200px;
+    margin-right: 24px;
+    border: 1px solid lightgrey;
+    box-shadow: 3px 3px 5px 3px lightgrey;
+    margin-bottom: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+
+    &__title, &__genre {
+        margin-bottom: 8px;
+    }
+
+    &__info {
+        padding: 8px;
+    }
+
+    &__thumbnail {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 2px solid black;
+    }
+
+    &--active {
+        opacity: 0.5;
+    }
 }
