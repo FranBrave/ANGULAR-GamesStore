@@ -1,4 +1,3 @@
-import { ApirestService } from './../../core/services/apirest.service';
 import { IGame } from './../../core/services/models/games.models';
 import { PaginationService } from '../../core/services/pagination.service';
 import { GamesService } from './../../core/services/games.service';
@@ -25,13 +24,16 @@ export class GameListComponent implements OnInit {
   constructor(
 
     private gamesService: GamesService,
-    private apiService: ApirestService,
     private paginationService: PaginationService,
     private activatedRoute: ActivatedRoute
     
   ) {}
 
   ngOnInit(): void {
+
+    this.getGames()
+
+
     this.games = this.activatedRoute.snapshot.data[0];
     this.paginationService.maxPage$.subscribe(page => {
       this.maxPage = page;
@@ -56,7 +58,7 @@ export class GameListComponent implements OnInit {
 
 
   private getGames() {
-    this.apiService.getGames().subscribe((games) => {
+    this.gamesService.getGames().subscribe((games) => {
       this.games = games;
     });
   }
