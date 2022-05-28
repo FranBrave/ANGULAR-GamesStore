@@ -1,3 +1,4 @@
+import { SharedModule } from './../../shared/shared.module';
 
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import { RecomendationsComponent } from './recomendations.component';
     CommonModule,
     RecomendationsRoutingModule,
     RouterModule,
+    SharedModule
   ]
 })
 export class RecomendationsModule { }

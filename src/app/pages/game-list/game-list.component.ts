@@ -36,6 +36,7 @@ export class GameListComponent implements OnInit {
     
   ) {}
 
+
   postList(): void {
     this.gamesService.getGames().subscribe(response => {
       this.POSTS = response;
@@ -59,12 +60,17 @@ export class GameListComponent implements OnInit {
     this.postList();
     this.getGames();
 
+    
+this.gamesService.getGames().subscribe((games) => {
+this.games = games;
+});
 
     this.games = this.activatedRoute.snapshot.data[0];
     this.paginationService.maxPage$.subscribe(page => {
       this.maxPage = page;
     });
   }
+
 
   public onModify() {
     this.canModify = !this.canModify;

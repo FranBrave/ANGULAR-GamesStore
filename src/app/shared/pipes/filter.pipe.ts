@@ -1,11 +1,8 @@
-import { GameListModule } from '../../pages/game-list/game-list.module';
-
 import { Pipe, PipeTransform } from '@angular/core';
 import { IGame } from 'src/app/core/services/models/games.models';
 
 @Pipe({
   name: 'filter',
-  pure: false
 })
 export class FilterPipe implements PipeTransform {
 
@@ -18,5 +15,3 @@ export class FilterPipe implements PipeTransform {
   }
 
 }
-
-

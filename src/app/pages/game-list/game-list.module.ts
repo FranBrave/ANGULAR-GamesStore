@@ -1,3 +1,4 @@
+import { FilterPipe } from './../../shared/pipes/filter.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -21,7 +22,8 @@ import { PipesModule } from 'w-ng5';
     GameListRoutingModule,
     RouterModule,
     PipesModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    SharedModule
   ]
 })
 export class GameListModule { }
