@@ -2,7 +2,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { PaginationService } from 'src/app/core/services/pagination.service';
 import { IGame } from 'src/app/core/services/models/games.models';
-import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @Pipe({
