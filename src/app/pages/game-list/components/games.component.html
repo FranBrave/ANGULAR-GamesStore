@@ -1,11 +1,4 @@
-<div
-  class="game"
-  *ngIf="games"
-  (click)="onClick()"
-  [ngClass]="{
-    'game--active': isSelected
-  }"
->
+<div class="game" *ngIf="games">
   <img class="game__image" [src]="games.thumbnail" />
   <div class="game__info">
     <p class="game__title">Title: {{ games.title }}</p>

@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';;
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PaginationService } from './services/pagination.service';
 
+
 @NgModule({
   declarations: [
     HeaderComponent,

@@ -8,6 +8,9 @@ const routes: Routes = [
   path: "games", loadChildren: () => import ("./pages/game-list/game-list.module").then(m => m.GameListModule)
 },
 {
+  path: "home",   loadChildren: () => import ("./pages/home/home.module").then(m => m.HomeModule)
+},
+{
   path: "detail", loadChildren: () => import ("./pages/game-detail/games-detail.module").then(m => m.GamesDetailModule)
 },
 {
@@ -17,7 +20,7 @@ const routes: Routes = [
   path: "about" , loadChildren: () => import ("../app/pages/about/about.module").then(m => m.AboutModule)
 },
 {
-  path:"", redirectTo: "games" , pathMatch: "full"
+  path:"", redirectTo: "home" , pathMatch: "full"
 }
 ];
 
@@ -26,3 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+  

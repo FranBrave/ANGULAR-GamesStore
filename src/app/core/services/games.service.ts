@@ -18,7 +18,7 @@ export class GamesService {
 
   }
 
-    public getGameById(id: Number): Observable<IGame> {
+    public getGameById(id: number): Observable<IGame> {
       return this.httpClient.get<IGame>(`${environment.apiUrl}games/${id}`);
     }
 
