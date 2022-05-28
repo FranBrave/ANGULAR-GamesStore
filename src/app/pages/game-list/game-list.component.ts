@@ -81,13 +81,6 @@ this.games = games;
   }
 
 
-  public onDelete(id: string) {
-    this.gamesService.deleteGame(id).subscribe((game) => {
-      console.log('Eliminado!', game);
-      this.getGames();
-    });
-  }
-
 
   private getGames() {
     this.gamesService.getGames().subscribe((games) => {

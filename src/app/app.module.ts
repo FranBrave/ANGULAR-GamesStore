@@ -6,9 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { FormsModule } from '@angular/forms';
 import { PipesModule } from 'w-ng5';
-import { HomeComponent } from './pages/home/home.component';
 
 
 

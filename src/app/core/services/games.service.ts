@@ -22,8 +22,4 @@ export class GamesService {
       return this.httpClient.get<IGame>(`${environment.apiUrl}games/${id}`);
     }
 
-
-   public deleteGame(idGame: string): Observable<IGame> {
-    return this.httpClient.delete<IGame>( `${environment.apiUrl}games/${idGame}`);
   }
-}

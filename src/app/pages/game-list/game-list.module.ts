@@ -1,4 +1,4 @@
-import { FilterPipe } from './../../shared/pipes/filter.pipe';
+import { GamesDetailComponent } from './../game-detail/games-detail.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
