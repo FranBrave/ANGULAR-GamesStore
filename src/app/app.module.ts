@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PipesModule } from 'w-ng5';
-
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -22,7 +22,8 @@ import { PipesModule } from 'w-ng5';
     HttpClientModule,
     CoreModule,
     NgxPaginationModule,
-    PipesModule
+    PipesModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { IGame } from './models/games.models';
+import { IGame } from './interfaces/games.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';

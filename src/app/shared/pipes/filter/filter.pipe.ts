@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IGame } from 'src/app/core/services/models/games.models';
+import { IGame } from 'src/app/core/services/interfaces/games.interface';
 
 @Pipe({
   name: 'filter',

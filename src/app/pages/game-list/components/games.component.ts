@@ -1,4 +1,4 @@
-import { IGame } from '../../../core/services/models/games.models';
+import { IGame } from '../../../core/services/interfaces/games.interface';
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 

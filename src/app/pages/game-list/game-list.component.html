@@ -1,23 +1,17 @@
 <input placeholder="Search game..." [(ngModel)]="filterValue" />
 <h1>Games to get for free</h1>
 <div *ngIf="games" class="games-list">
-  <app-games
-    class="games"
-    *ngFor="
-      let game of games
-        | filter: filterValue
-        | paginate
-          : {
-              itemsPerPage: tableSize,
-              currentPage: page,
-              totalItems: count
-            }
-    "
-    [games]="game"
-  ></app-games>
-  <pagination-controls
-    previousLabel="Prev"
-    nextLabel="Next"
-    (pageChange)="onTableDataChange($event)"
-  ></pagination-controls>
+  <div class="card" *ngFor="let game of games | filter: filterValue | paginate: { itemsPerPage: tableSize, currentPage: page, totalItems: count }">
+    <img [src]="game.thumbnail" alt="Card Image" class="card-image">
+    <div class="card-content">
+      <h3 class="card-title">{{ game.title }}</h3>
+      <p class="card-description">{{ game.short_description }}</p>
+      <a href="#" class="card-link">Read More</a>
+    </div>
+  </div>
 </div>
+<pagination-controls
+  previousLabel="Prev"
+  nextLabel="Next"
+  (pageChange)="onTableDataChange($event)"
+></pagination-controls>

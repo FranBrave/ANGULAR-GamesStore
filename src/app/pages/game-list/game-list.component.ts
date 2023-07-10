@@ -1,4 +1,4 @@
-import { IGame } from './../../core/services/models/games.models';
+import { IGame } from '../../core/services/interfaces/games.interface';
 import { PaginationService } from '../../core/services/pagination.service';
 import { GamesService } from './../../core/services/games.service';
 import { Component, OnInit } from '@angular/core';

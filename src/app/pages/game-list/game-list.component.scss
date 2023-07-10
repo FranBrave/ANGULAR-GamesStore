@@ -1,8 +1,70 @@
-.game-list {
+.games-list {
+    display: grid;
+    grid-gap: 20px; /* Espacio entre los elementos */
+  
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr); /* Muestra 3 columnas en dispositivos grandes */
+    }
+  
+    @media screen and (max-width: 1199px) {
+      grid-template-columns: repeat(2, 1fr); /* Muestra 2 columnas en dispositivos medianos */
+    }
+  
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr; /* Muestra 1 columna en dispositivos pequeños */
+    }
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding: 24px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .card-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  
+    &:hover {
+      color: #0056b3;
+    }
+  }
+  

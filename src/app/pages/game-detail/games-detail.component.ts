@@ -1,5 +1,5 @@
 import { GamesService } from './../../core/services/games.service';
-import { IGame } from './../../core/services/models/games.models';
+import { IGame } from '../../core/services/interfaces/games.interface';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
